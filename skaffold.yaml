@@ -4,5 +4,6 @@ metadata:
   name: redis-service
 manifests:
   rawYaml:
-    - ./k8s/redis/*.yaml
+    - ./k8s/redis-server/*.yaml
+    - ./k8s/redis-service/*.yaml
 

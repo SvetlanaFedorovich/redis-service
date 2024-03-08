@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "mvp.project.authservice";
+
+service RedisService {
+    rpc saveSessionID (CookieRequest) returns (CookieResponse) {}
+    rpc getSessionID (SessionRequest) returns (CookieResponse) {}
+}
+message SessionRequest{
+    string username = 1;
+}
+
+message CookieRequest {
+    string name = 1;
+    string value = 2;
+}
+
+message CookieResponse {
+    string result = 1;
+}
